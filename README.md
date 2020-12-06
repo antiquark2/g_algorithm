@@ -1,4 +1,28 @@
-# g_algorithm
+#g_algorithm v0.0
+
+This is a proof of concept to show how C++ `<algorithm>` functions can be implemented in C11. 
+
+The underlying technique is to use code generation to generate _Generic operations for supported types. 
+
+##Limitations
+
+The g_algorithm library can only be compiled with C11 with VLAs.
+
+The functions in g_algorithm only support fundamental types. If G_BASIC_FULL is defined, then all the fundamental non-pointer
+types { bool, char, ... , long double complex } are supported. If G_BASIC_ABBREV is defined, then 
+only a subset of the fundamental types are supported:
+*  bool 
+*  char 
+*  short 
+*  int 
+*  long 
+*  unsigned long 
+*  float 
+*  double 
+
+
+
+
 [`T g_accumulate(T* first, T* last, T init)                                                              `](https://en.cppreference.com/w/cpp/algorithm/accumulate)     
 [`T g_accumulate_f(T* first, T* last, T init, Function op)                                               `](https://en.cppreference.com/w/cpp/algorithm/accumulate)     
 [`T* g_adjacent_difference(T* first, T* last, T* dest)                                                   `](https://en.cppreference.com/w/cpp/algorithm/adjacent_difference)     
