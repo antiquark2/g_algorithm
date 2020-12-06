@@ -1,10 +1,10 @@
-#g_algorithm v0.0
+# g_algorithm v0.0
 
 This is a proof of concept to show how C++ `<algorithm>` functions can be implemented in C11. 
 
 The underlying technique is to use code generation to generate _Generic operations for supported types. 
 
-##Limitations
+## Limitations
 
 The g_algorithm library can only be compiled with C11 with VLAs.
 
