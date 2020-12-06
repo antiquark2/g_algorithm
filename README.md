@@ -2,7 +2,8 @@
 
 This is a proof of concept to show how C++ `<algorithm>` functions can be implemented in C11. 
 
-The underlying technique is to use code generation to generate _Generic operations for supported types. 
+The underlying technique is to use an exhaustive list of pre-generated `_Generic` functions to create a sort of "generic infrastructure" for 
+supported types, along with `void` pointers and macros. 
 
 ## Limitations
 
@@ -19,6 +20,12 @@ only a subset of the fundamental types are supported:
 *  unsigned long 
 *  float 
 *  double 
+
+Due to the combinations of types, there's a sort of "combinatorial explosion" in _Generic macros, as more types are used. 
+Thus, the abbreviated `g_basic_abbrev.h` header is over 5000 lines long, but the non-abbreviated `g_basic.h` is over
+46,000 lines long. This has a huge impact on compilation times, and takes 100 times as long to compile with the full 
+`g_basic.h` file. 
+
 
 
 
