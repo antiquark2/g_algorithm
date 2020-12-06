@@ -1,6 +1,6 @@
 # g_algorithm v0.0
 
-This is a proof of concept to show how C++ <algorithm> functions can be implemented in C11. 
+This is a proof of concept to show how C++ `<algorithm>` functions can be implemented in C11. 
 
 The underlying technique is to use an exhaustive list of pre-generated **_Generic** functions to create a sort of "generic infrastructure" for 
 supported types, along with void pointers and macros. 
@@ -11,7 +11,7 @@ The g_algorithm library can only be compiled with C11 with VLAs.
 
 The container-oriented algorithms only work on C-style arrays. 
 
-The g_algorithm library only implements a subset of the C++ <algorithm> library. 
+The g_algorithm library only implements a subset of the C++ `<algorithm>` library. 
 
 These algorithms are most likely slower than custom written code. 
 
@@ -146,5 +146,5 @@ Below is a list of all the functions implemented in g_algorithm. Each one links 
 
 * Explain what's going on in the various header files. 
 * Clean up some inconsistent naming conventions. 
-* Implement more functions from <algorithm>. 
+* Implement more functions from `<algorithm>`. 
 
