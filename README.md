@@ -30,16 +30,20 @@ Thus, the abbreviated `g_basic_abbrev.h` header is over 5000 lines long, but the
 
 To build and run a test, type:
 
-`./maketest.sh`  
-`./dotest.sh`
+```
+ ./maketest.sh  
+ ./dotest.sh
+```
 
 The output should say "SUCCESS" if all is well. 
 
 If you want to generate new `g_basic.h` and `g_basic_abbrev.h files`, then type:
 
-`./makegen.sh`  
-`./gen_full`  
-`./gen_abbrev`  
+```
+ ./makegen.sh  
+ ./gen_full  
+ ./gen_abbrev  
+```
 
 ## File Description
 
