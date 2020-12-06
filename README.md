@@ -21,11 +21,29 @@ only a subset of the fundamental types are supported:
 *  float 
 *  double 
 
-Due to the combinations of types, there's a sort of "combinatorial explosion" in _Generic macros, as more types are used. 
+Due to the combinations of types, there's a sort of "combinatorial explosion" of _Generic macros, as more types are used. 
 Thus, the abbreviated `g_basic_abbrev.h` header is over 5000 lines long, but the non-abbreviated `g_basic.h` is over
 46,000 lines long. This has a huge impact on compilation times, and takes 100 times as long to compile with the full 
 `g_basic.h` file. 
 
+## Instructions
+
+To build and run a test, type:
+
+`./maketest.sh`  
+`./dotest.sh`
+
+The output should say "SUCCESS" if all is well. 
+
+If you want to generate new `g_basic.h` and `g_basic_abbrev.h files`, then type:
+
+`./makegen.sh`  
+`./gen_full`  
+`./gen_abbrev`  
+
+## File Description
+
+## Function Listing
 
 
 
