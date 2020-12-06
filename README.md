@@ -1,18 +1,24 @@
 # g_algorithm v0.0
 
-This is a proof of concept to show how C++ `<algorithm>` functions can be implemented in C11. 
+This is a proof of concept to show how C++ <algorithm> functions can be implemented in C11. 
 
-The underlying technique is to use an exhaustive list of pre-generated `_Generic` functions to create a sort of "generic infrastructure" for 
-supported types, along with `void` pointers and macros. 
+The underlying technique is to use an exhaustive list of pre-generated **_Generic** functions to create a sort of "generic infrastructure" for 
+supported types, along with void pointers and macros. 
 
 ## Limitations
 
 The g_algorithm library can only be compiled with C11 with VLAs.
 
-The functions in g_algorithm only support fundamental types. If G_BASIC_FULL is defined, then all the fundamental non-pointer
-types { bool, char, ... , long double complex } are supported. If G_BASIC_ABBREV is defined, then 
+The container-oriented algorithms only work on C-style arrays. 
+
+The g_algorithm library only implements a subset of the C++ <algorithm> library. 
+
+These algorithms are most likely slower than custom written code. 
+
+These algorithms only support fundamental types. If G_BASIC_FULL is defined, then all the fundamental non-pointer
+types **{ _Bool, char, ... , long double _Complex }** are supported. If G_BASIC_ABBREV is defined, then 
 only a subset of the fundamental types are supported:
-*  bool 
+*  _Bool 
 *  char 
 *  short 
 *  int 
@@ -31,8 +37,8 @@ Thus, the abbreviated `g_basic_abbrev.h` header is over 5000 lines long, but the
 To build and run a test, type:
 
 ```
- ./maketest.sh  
- ./dotest.sh
+./maketest.sh  
+./dotest.sh
 ```
 
 The output should say "SUCCESS" if all is well. 
@@ -40,14 +46,30 @@ The output should say "SUCCESS" if all is well.
 If you want to generate new `g_basic.h` and `g_basic_abbrev.h files`, then type:
 
 ```
- ./makegen.sh  
- ./gen_full  
- ./gen_abbrev  
+cd codegen
+./makegen.sh  
+./gen_full  
+./gen_abbrev  
 ```
 
-## File Description
+The gen_* executables make use of the file **errors.txt** to avoid erroneous code generation. If a line of code is found in **errors.txt**, 
+the generator will not write that line to the corresponding g_basic file.  
 
 ## Function Listing
+
+The g_algorithm functions attempt to emulate their C++ counterparts somewhat closely, as far as the limitations of 
+C11 will allow. 
+
+C++ functions which previously returned a pair now put the result in a pointer argument. For example, in C++, the function **minmax** returns a 
+pair with two values. However, in g_algorithm, the **g_minmax** function actually returns void, but takes a pointer to a pair as the
+first argument. 
+
+C11 doesn't readily allow function overloading based on different numbers of arguments. Thus, a "wart" is attached 
+to the function name to indicate which function is being used. For example, the C++ **mismatch** function has numerous variants
+based on the number of iterators passed, and whether a predicate is provided. In g_algorithm, these variants are distinguished
+by appending _2 or _p (or both) to the function name. 
+
+Below is a list of all the functions implemented in g_algorithm. Each one links to the pertinent C++ entry at cppreference.com. 
 
 
 
