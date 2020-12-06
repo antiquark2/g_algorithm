@@ -28,9 +28,9 @@ only a subset of the fundamental types are supported:
 *  double 
 
 Due to the combinations of types, there's a sort of "combinatorial explosion" of _Generic macros, as more types are used. 
-Thus, the abbreviated `g_basic_abbrev.h` header is over 5000 lines long, but the non-abbreviated `g_basic.h` is over
+Thus, the abbreviated **g_basic_abbrev.h** header is over 5000 lines long, but the non-abbreviated **g_basic.h** is over
 46,000 lines long. This has a huge impact on compilation times, and takes 100 times as long to compile with the full 
-`g_basic.h` file. 
+**g_basic.h** file. 
 
 ## Instructions
 
@@ -43,7 +43,7 @@ To build and run a test, type:
 
 The output should say "SUCCESS" if all is well. 
 
-If you want to generate new `g_basic.h` and `g_basic_abbrev.h files`, then type:
+If you want to generate new **g_basic.h** and **g_basic_abbrev.h** files, then type:
 
 ```
 cd codegen
@@ -70,9 +70,6 @@ based on the number of iterators passed, and whether a predicate is provided. In
 by appending _2 or _p (or both) to the function name. 
 
 Below is a list of all the functions implemented in g_algorithm. Each one links to the pertinent C++ entry at cppreference.com. 
-
-
-
 
 [`T g_accumulate(T* first, T* last, T init)                                                              `](https://en.cppreference.com/w/cpp/algorithm/accumulate)     
 [`T g_accumulate_f(T* first, T* last, T init, Function op)                                               `](https://en.cppreference.com/w/cpp/algorithm/accumulate)     
@@ -144,3 +141,10 @@ Below is a list of all the functions implemented in g_algorithm. Each one links 
 [`T* g_transform_2(T* first, T* last, T* first2, T* dest, Function func)                                 `](https://en.cppreference.com/w/cpp/algorithm/transform)     
 [`T* g_upper_bound(T* first, T* last, T value)                                                           `](https://en.cppreference.com/w/cpp/algorithm/upper_bound)     
 [`T* g_upper_bound_f(T* first, T* last, T value, Function comp)                                          `](https://en.cppreference.com/w/cpp/algorithm/upper_bound)     
+
+## Future Work
+
+* Explain what's going on in the various header files. 
+* Clean up some inconsistent naming conventions. 
+* Implement more functions from <algorithm>. 
+
