@@ -1,0 +1,118 @@
+g_minmax_element 2 1 -> 1.147 100.97
+g_minmax_element_f 1 5 -> 71 89
+g_adjacent_difference 5 [012!]
+g_adjacent_difference_f 5 [012!]
+g_minmax 55 66
+g_minmax 70 77
+g_minmax_f 51 42
+g_minmax_f 42 53
+g_lower_bound_f 4 [13]
+g_upper_bound_f 7 [24]
+g_clamp_f 205
+g_clamp_f 102
+g_clamp_f 7
+g_clamp 100
+g_clamp 1
+g_clamp 255
+g_lower_bound 2 [c]
+g_upper_bound 5 [d]
+g_rotate 13 [nopqrstuvwxyzabcdefghilklm]
+g_partition 2 4 6 8 / 5 3 7 1 9 
+g_sort 1e-09 1.59174 21.3941 760.736 5401.75 56322.5 1e+09 
+g_next_permutation
+abc
+acb
+bac
+bca
+cab
+cba
+g_prev_permutation
+cba
+cab
+bca
+bac
+acb
+abc
+g_reverse 44 33 22 11 
+g_reverse 22 33 44 11 
+g_replace -> 1 99 1 99 3 1 99 3 4 1 99 3 4 5 
+g_remove_if 9 -> 2 3 5 6 7 8 14 18 30 -999 16 18 25 30 
+g_remove 10 -> 1 1 3 1 3 4 1 3 4 5 -999 3 4 5 
+g_generate_n 0.000000 1.000000 2.000000 0.000000 1.000000 99.000000 99.000000 99.000000 99.000000 99.000000 
+g_generate 2.000000 0.000000 1.000000 2.000000 0.000000 1.000000 2.000000 0.000000 1.000000 2.000000 
+g_fill_n 2.200000 2.200000 2.200000 2.200000 2.200000 0.000000 0.000000 0.000000 0.000000 0.000000 
+g_fill 1.100000 1.100000 1.100000 1.100000 1.100000 
+g_copy_backward 5 [0]
+g_copy_backward -> [0123]
+g_copy -> [0123456]
+g_copy 8 [3]
+g_search_n_f 5 82.000000
+g_search_n 5 22.000000
+g_adjacent_find_f 2 33.000000
+g_adjacent_find 4 55
+a={11,2,23,14}  b={1,42,33,25}  c={91,12,23,34} d={91,12,23,34,34} f=is_lt_mod_10
+g_lexicographical_compare_f a b 1
+g_lexicographical_compare_f b a 0
+g_lexicographical_compare_f a c 0
+g_lexicographical_compare_f c a 0
+g_lexicographical_compare_f b c 0
+g_lexicographical_compare_f c b 1
+g_lexicographical_compare_f c d 1
+g_lexicographical_compare_f d c 0
+a={1,2,3,4}  b={1,2,3,5}  c={1,2,3,4}
+g_lexicographical_compare a b 1
+g_lexicographical_compare b a 0
+g_lexicographical_compare a c 0
+g_lexicographical_compare c a 0
+g_lexicographical_compare b c 0
+g_lexicographical_compare c b 1
+g_find_first_of_p 4 [55.000000]
+g_find_first_of 6 [77.000000]
+g_find_end_p 22 [o]
+g_random_shuffle_r { 7.7 6.6 9.9 8.8 1.1 5.5 4.4 3.3 2.2 }
+g_random_shuffle { 9.9 4.4 2.2 5.5 7.7 6.6 1.1 8.8 3.3 }
+g_swap_ranges ret 6
+g_swap_ranges {ABCDEF} { 48.000000 49.000000 50.000000 51.000000 52.000000 53.000000 }
+g_find_end 22 [o]
+g_search 10 [t]
+g_search 3 48.000000
+g_accumulate_op 121.200000
+g_accumulate 150.010000
+g_iota 1.100000 2.100000 3.100000 4.100000 5.100000 
+[abcDEF]
+g_all_of isalpha 1
+g_all_of isupper 0
+g_any_of ispunct 0
+g_any_of isupper 1
+g_none_of ispunct 1
+g_none_of isupper 0
+g_find_if_not isalpha 3 [1]
+g_find_if ispunct 8 [!]
+g_find 2 [C]
+g_inner_product_op 4.563530
+g_inner_product_op 33.290600
+g_inner_product 33.290600
+g_mismatch_p_2 pair 3 3
+g_mismatch_p_2 val 4
+g_mismatch_p pair 4 4
+g_mismatch_p vals 5 24
+g_mismatch_2 pair 5 5
+g_mismatch pair 6 6
+g_mismatch vals '7' 54.000000
+g_count isdigit 6
+g_count isalpha 4
+g_count 4
+g_transform_2 d_plus ABDEGHJL
+g_tranform isalpha 1 1 1 0 0 0 0 0 0 0 0 0 0 0 
+g_tranform isdigit 0 0 0 0 4 4 4 0 0 0 0 0 0 0 
+g_tranform isspace 0 0 0 8 0 0 0 8 0 0 0 8 8 0 
+g_for_each print_d 1.1 2.2 3.3 4.4 
+g_min 3
+g_max 64
+g_min_if 48
+g_min_element 2 11.1
+g_max_element 3 66.6
+g_min_element_f abs_less 5 1.1
+g_min_element_f abs_more 1 -10.1
+g_max_element_f abs_less 1 -10.1
+g_max_element_f abs_more 5 1.1
